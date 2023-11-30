@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang=es>
+
+<head>
+  <meta charset=UTF-8>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel=stylesheet href=../css/style.css>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script type="module" src=../js/newData.js defer></script>
+
+  <title>Basket-Tracker</title>
+</head>
+
+<body>
+  <header>
+    <div id='nav-container'>
+      <nav>
+        <ul>
+          <li><a href='#' title="Añadir estadística"><i class='bx bx-message-square-add'></i></i></a></li>
+          <li><a href='../../index.html' title="Ver estadísticas"><i class='bx bxs-basketball'></i></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <form method="post" id="shootsForm">
+      <div>
+        <label for="date">Fecha</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div>
+        <label for="shoot">Tipo</label>
+        <select id="shoot" name="shoot" required>
+          <option value="shoots2">Tiros de 2</option>
+          <option value="shoots3">Tiros de 3</option>
+        </select>
+      </div>
+      <div>
+        <label for="round1">Ronda 1 (20%)</label>
+        <input type="number" id="round1" name="round1" min=0 max=20 value=0 required>
+      </div>
+      <div>
+        <label for="round2">Ronda 2 (40%)</label>
+        <input type="number" id="round2" name="round2" min=0 max=20 value=0 required>
+      </div>
+      <div>
+        <label for="round3">Ronda 3 (60%)</label>
+        <input type="number" id="round3" name="round3" min=0 max=20 value=0 required>
+      </div>
+      <div>
+        <label for="round4">Ronda 4 (80%)</label>
+        <input type="number" id="round4" name="round4" min=0 max=20 value=0 required>
+      </div>
+      <div>
+        <label for="round5">Ronda 5 (100%)</label>
+        <input type="number" id="round5" name="round5" min=0 max=20 value=0 required>
+      </div>
+
+      <div>
+        <button type="submit">Añadir estadística</button>
+      </div>
+    </form>
+
+  </main>
+  <footer>
+    <h5 class='dark-text'>Basket-Tracker - EliasMarNev © 2023</h5>
+  </footer>
+</body>
+
+</html>

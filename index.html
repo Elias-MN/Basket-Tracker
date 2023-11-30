@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang=es>
+
+<head>
+  <meta charset=UTF-8>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel=stylesheet href=./src/css/style.css>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script type="module" src="./node_modules/chart.js/dist/chart.umd.js" defer></script>
+  <script type="module" src=./src/js/index.js defer></script>
+
+  <title>Basket-Tracker</title>
+</head>
+
+<body>
+  <header>
+    <div id='nav-container'>
+      <nav>
+        <ul>
+          <li><a href='./src/html/newData.html' title="Añadir estadística"><i
+                class='bx bx-message-square-add'></i></i></a></li>
+          <li><a href='#' title="Ver estadísticas"><i class='bx bxs-basketball'></i></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <h1 class='dark-text'>Basket Tracker</h1>
+    <section id="myChartSection">
+      <canvas id="myChart2"></canvas>
+      <canvas id="myChart3"></canvas>
+    </section>
+  </main>
+  <footer>
+    <h5 class='dark-text'>Basket-Tracker - EliasMarNev © 2023</h5>
+  </footer>
+</body>
+
+</html>
