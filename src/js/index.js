@@ -41,11 +41,8 @@ function setChart() {
     }
   });
 
-  console.log(shoots3DataList)
   shoots2DataList.sort((a, b) => new Date(a.x) - new Date(b.x));
   shoots3DataList.sort((a, b) => new Date(a.x) - new Date(b.x));
-  console.log(shoots3DataList)
-
 
   let mydataset2 = [
     {
@@ -74,13 +71,18 @@ function setChart() {
   ];
 
   let myoptions = {
-    maintainAspectRatio: true,
+    maintainAspectRatio: false,
     responsive: true,
     scales: {
       y: {
         min: 0,
         max: 100,
         stepSize: 5
+      },
+      x: {
+        grid: {
+          display: false
+        }
       }
     }
   }

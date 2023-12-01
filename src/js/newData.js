@@ -16,16 +16,15 @@ formElement.addEventListener("submit", event => {
   let percentage = +round1Element.value + +round2Element.value + +round3Element.value + +round4Element.value + +round5Element.value;
   let shoot = { "fecha": dateElement.value, "tipo": shootElement.value, "porcentaje": percentage };
   addShoots(shoot)
-  window.location.href = '../../index.html';
 })
 
-function addShoots(data) {
+async function addShoots(data) {
 
   dbManager.open()
     .then(() => {
       dbManager.addData(data)
         .then(() => {
-          console.log(data);
+          window.location.href = '../../index.html';
         })
         .catch((error) => {
           console.error("Error addData: " + error);
