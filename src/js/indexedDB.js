@@ -115,8 +115,6 @@ export class DatabaseManager {
     });
   }
 
-
-
   getAllData() {
     if (!this.db) {
       throw new Error("La base de datos no está abierta.");

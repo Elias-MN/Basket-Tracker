@@ -25,6 +25,7 @@ async function addShoots(data) {
       dbManager.addData(data)
         .then(() => {
           window.location.href = '../../index.html';
+          // TODO: Reiniciar form en lugar de redireccionar
         })
         .catch((error) => {
           console.error("Error addData: " + error);
