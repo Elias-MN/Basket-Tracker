@@ -4,29 +4,32 @@ const dbManager = DatabaseManager.getInstance();
 const myChartElement = document.getElementById('myChart');
 
 let shootsList = [];
-let shoots2DataList = [];
+let shootsDataList = [];
 
 function setChart() {
 
   shootsList.forEach(element => {
     let newShoot = { x: element.fecha, y: element.porcentaje, shootID: element.id };
     if (element.tipo == "shoots2") {
-      shoots2DataList.push(newShoot);
+      shootsDataList.push(newShoot);
     }
   });
 
-  shoots2DataList.sort((a, b) => new Date(a.x) - new Date(b.x));
+  shootsDataList.sort((a, b) => new Date(a.x) - new Date(b.x));
 
   let myDataset = [
     {
       label: '% Tiros de 2',
-      data: shoots2DataList,
+      data: shootsDataList,
       borderWidth: 3,
       borderColor: 'rgb(239, 154, 56)',
       tension: 0.1,
       backgroundColor: "rgb(250, 228, 157)",
       borderCapStyle: 'butt',
-      borderDash: [5, 5]
+      borderDash: [5, 5],
+      pointStyle: 'circle',
+      pointRadius: 7,
+      pointHoverRadius: 10
     }
   ];
 

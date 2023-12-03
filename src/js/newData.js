@@ -24,12 +24,15 @@ async function addShoots(data) {
     .then(() => {
       dbManager.addData(data)
         .then(() => {
-          if (data.tipo == "shoots2") {
-            window.location.href = './statistics2.html';
+          if (data.tipo == "shoots1") {
+            window.location.href = './statistics1.html';
           } else
-            if (data.tipo == "shoots3") {
-              window.location.href = './statistics3.html';
-            }
+            if (data.tipo == "shoots2") {
+              window.location.href = './statistics2.html';
+            } else
+              if (data.tipo == "shoots3") {
+                window.location.href = './statistics3.html';
+              }
         })
         .catch((error) => {
           console.error("Error addData: " + error);

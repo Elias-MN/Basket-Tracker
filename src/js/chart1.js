@@ -10,7 +10,7 @@ function setChart() {
 
   shootsList.forEach(element => {
     let newShoot = { x: element.fecha, y: element.porcentaje, shootID: element.id };
-    if (element.tipo == "shoots3") {
+    if (element.tipo == "shoots1") {
       shootsDataList.push(newShoot);
     }
   });
@@ -19,7 +19,7 @@ function setChart() {
 
   let myDataset = [
     {
-      label: '% Tiros de 3',
+      label: '% Tiros de 1',
       data: shootsDataList,
       borderWidth: 3,
       borderColor: 'rgb(239, 154, 56)',
@@ -34,14 +34,13 @@ function setChart() {
   ];
 
   let myOptions = {
-    /*
-    onClick: function (event, elements) {
+    /*onClick: function (event, elements) {
       if (elements.length > 0) {
         let confirm = window.confirm("¿Estás seguro de que deseas eliminar este dato?");
         if (confirm) {
           let indexChart = elements[0].index;
           let indexDB = elements[0].element.$context.raw.shootID;
-          shoots3DataList.splice(indexChart, 1);
+          shoots2DataList.splice(indexChart, 1);
           myChart.update();
           deleteStatisticDB(indexDB);
         }
