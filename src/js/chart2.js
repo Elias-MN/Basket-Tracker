@@ -31,7 +31,7 @@ function setChart() {
   ];
 
   let myOptions = {
-    onClick: function (event, elements) {
+    /*onClick: function (event, elements) {
       if (elements.length > 0) {
         let confirm = window.confirm("¿Estás seguro de que deseas eliminar este dato?");
         if (confirm) {
@@ -42,7 +42,7 @@ function setChart() {
           deleteStatisticDB(indexDB);
         }
       }
-    },
+    },*/
     maintainAspectRatio: false,
     responsive: true,
     scales: {
