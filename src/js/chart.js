@@ -2,6 +2,8 @@ import { DatabaseManager } from "./indexedDB.js";
 
 const dbManager = DatabaseManager.getInstance();
 const myChartElement = document.getElementById('myChart');
+const myChartSection = document.querySelector('.myChartSection');
+const chartID = myChartSection.getAttribute('chart-id');
 
 let shootsList = [];
 let shootsDataList = [];
@@ -10,7 +12,7 @@ function setChart() {
 
   shootsList.forEach(element => {
     let newShoot = { x: element.fecha, y: element.porcentaje, shootID: element.id };
-    if (element.tipo == "shoots2") {
+    if (element.tipo === chartID) {
       shootsDataList.push(newShoot);
     }
   });
@@ -19,7 +21,7 @@ function setChart() {
 
   let myDataset = [
     {
-      label: '% Tiros de 2',
+      label: '% de tiro',
       data: shootsDataList,
       borderWidth: 3,
       borderColor: 'rgb(239, 154, 56)',
