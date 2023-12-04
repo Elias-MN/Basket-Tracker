@@ -29,7 +29,9 @@ function setChart() {
       borderDash: [5, 5],
       pointStyle: 'circle',
       pointRadius: 7,
-      pointHoverRadius: 10
+      pointHoverRadius: 10,
+      backgroundColor: "rgb(250, 228, 157)",
+      fill: true
     }
   ];
 
