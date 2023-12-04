@@ -13,7 +13,11 @@ function createTable() {
     let row = document.createElement("tr");
     for (let [key, value] of Object.entries(statistic)) {
       let data = document.createElement("td");
+
       if (key === "tipo") {
+        if (value === "shoots1") {
+          value = "Tiros libres";
+        }
         if (value === "shoots2") {
           value = "Tiros de 2";
         }
@@ -21,6 +25,13 @@ function createTable() {
           value = "Triples";
         }
       }
+      if (key === "fecha") {
+        let year = value.split('-')[0].slice(-2);;
+        let month = value.split('-')[1];
+        let day = value.split('-')[2];
+        value = `${day}/${month}/${year}`;
+      }
+
       if (key === "id") {
         let deleteButton = document.createElement("button");
         deleteButton.setAttribute("id", value);
@@ -32,6 +43,7 @@ function createTable() {
       } else {
         data.innerText = value;
       }
+
       row.appendChild(data);
     }
     tableElement.appendChild(row)

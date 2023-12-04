@@ -19,7 +19,7 @@ function setChart() {
 
   let myDataset = [
     {
-      label: '% Tiros de 1',
+      label: '% Tiros libres',
       data: shootsDataList,
       borderWidth: 3,
       borderColor: 'rgb(239, 154, 56)',
@@ -34,18 +34,6 @@ function setChart() {
   ];
 
   let myOptions = {
-    /*onClick: function (event, elements) {
-      if (elements.length > 0) {
-        let confirm = window.confirm("¿Estás seguro de que deseas eliminar este dato?");
-        if (confirm) {
-          let indexChart = elements[0].index;
-          let indexDB = elements[0].element.$context.raw.shootID;
-          shoots2DataList.splice(indexChart, 1);
-          myChart.update();
-          deleteStatisticDB(indexDB);
-        }
-      }
-    },*/
     maintainAspectRatio: false,
     responsive: true,
     scales: {
@@ -83,23 +71,6 @@ function getStatisticsDB() {
         })
         .catch((error) => {
           console.error("Error addData: " + error);
-        });
-    })
-    .catch((error) => {
-      console.error("Error open: " + error);
-    });
-
-}
-
-function deleteStatisticDB(id) {
-  dbManager.open()
-    .then(() => {
-      dbManager.deleteData(id)
-        .then(result => {
-          console.log("Eliminado con éxito");
-        })
-        .catch((error) => {
-          console.error("Error deleteData: " + error);
         });
     })
     .catch((error) => {

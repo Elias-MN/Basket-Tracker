@@ -60,6 +60,7 @@ nav{
   width: 400px;
   height: 50px;
   border-radius: 25px;
+  border: 2px solid var(--dark-color);;
 }
   nav>ul{
     display: flex;
@@ -129,9 +130,6 @@ form label{
 @media (max-width: 600px) {
   .myChartSection {
     width: 100vw;
-  }
-  main{
-    min-height: calc(100vh - var(--margin-bottom));
   }
 
   form {
